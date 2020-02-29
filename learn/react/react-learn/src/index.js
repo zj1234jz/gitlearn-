@@ -1,7 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import StudentList from "./components/StudentList"
+const url = "https://api.duyiedu.com/api/student/findAll?appkey=demo13_1545210570249"
+async function getAllStudents(){
+    const stus  = await fetch(url).then(res=>res.json()).then(res=>res.data);
+    return stus;
+}
 
-
-ReactDOM.render("hello world", document.getElementById('root'));
+async function render(){
+    ReactDOM.render("正在加载中...", document.getElementById('root'));
+    const stus = await getAllStudents();
+    ReactDOM.render(<StudentList stus={stus}/>, document.getElementById('root'));
+}
+render();
 
 
