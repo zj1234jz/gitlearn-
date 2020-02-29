@@ -3,7 +3,13 @@ import ReactDOM from 'react-dom';
 import StudentList from "./components/StudentList"
 const url = "https://api.duyiedu.com/api/student/findAll?appkey=demo13_1545210570249"
 async function getAllStudents(){
-    const stus  = await fetch(url).then(res=>res.json()).then(res=>res.data);
+    const stus  = await fetch(url).then(res=>{
+        console.log(res);
+        return res.json()
+    }).then(res=>{
+        console.log(res)
+        return res.data
+    });
     return stus;
 }
 
