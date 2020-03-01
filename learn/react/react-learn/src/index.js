@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Test from "./components/Test"
 
-
-ReactDOM.render("hello world", document.getElementById('root'));
+ReactDOM.render(<Test/>, document.getElementById('root'));
 
 
