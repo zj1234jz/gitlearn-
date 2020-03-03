@@ -1,0 +1,18 @@
+.item{
+    border: 1px solid #556622;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: aqua;
+    margin-left: 5px;
+}
+.item.disabled{
+    cursor: not-allowed;
+    color: #cccccc;
+}
+.item.active{
+    border: none;
+    color:orange;
+}
+.current{
+    margin-left: 10px;
+}
