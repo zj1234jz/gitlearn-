@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Pager from "../Pager"
 import StudentList from "../StudentList"
-import Model from "../Model"
+// import Model from "../Model"
 export default class index extends Component {
     state={
         current:1,
