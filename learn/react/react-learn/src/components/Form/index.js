@@ -7,6 +7,7 @@ export default class index extends Component {
         sex:"male",
         loves:["足球","篮球","手机","西瓜","美女"],
         sLoves:[],
+        city:"beijing"
     }
     handleChange=e=>{
         const name = e.target.name;
@@ -41,6 +42,14 @@ export default class index extends Component {
                 </p>
                 <p>
                     {this.getLoves()}
+                </p>
+                <p>
+                    <select name="city" value={this.state.city} onChange={this.handleChange}>
+                        <option value="beijing">北京</option>
+                        <option value="shanghai">上海</option>
+                        <option value="tianjing">天津</option>
+                        <option value="nanjing">南京</option>
+                    </select>
                 </p>
                 <p>
                     <button onClick={()=>{
