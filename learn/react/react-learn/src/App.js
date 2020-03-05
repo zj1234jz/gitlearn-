@@ -1,10 +1,12 @@
 import React from 'react'
-import Form from "./components/Form"
+// import Test from "./components/common/CheckboxGroup/Test"
+// import Test from "./components/common/RadioGroup/Test"
+import Test from "./components/common/OptionGroup/Test"
 export default function App() {
     return (
         <div>
-            <Form >
-            </Form>
+            <Test />
+            
         </div>
     )
 }
