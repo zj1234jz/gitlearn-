@@ -16,6 +16,7 @@ export default class Banner extends Component {
         this.ref = ref
     }
     state={
+        imgSrcs:[...this.props.imgSrcs,this.props.imgSrcs[0]],
         currentIndex:0,
     }
     timer= null;
@@ -60,7 +61,7 @@ export default class Banner extends Component {
                 },this.props.gapDuration)
             }}>
 
-                <ImgContainer ref ={this.getRef} {...this.props}/>
+                <ImgContainer ref ={this.getRef} {...this.props}  imgSrcs ={this.state.imgSrcs}/>
                 <SwitchArrow onChange={this.changeTo}/>
                 <DotsSwitch onPageChange={(index)=>{
                     this.goto(index);
@@ -71,3 +72,4 @@ export default class Banner extends Component {
             </div>
         )
     }
+}
