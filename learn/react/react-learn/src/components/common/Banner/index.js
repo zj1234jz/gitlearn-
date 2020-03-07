@@ -16,7 +16,7 @@ export default class Banner extends Component {
         this.ref = ref
     }
     state={
-        imgSrcs:[...this.props.imgSrcs,this.props.imgSrcs[0]],
+        imgSrcs:[this.props.imgSrcs[this.props.imgSrcs.length-1],...this.props.imgSrcs,this.props.imgSrcs[0]],
         currentIndex:0,
     }
     timer= null;
